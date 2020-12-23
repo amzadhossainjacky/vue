@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue js Learning</title>
     <script src="js/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
@@ -36,10 +37,94 @@
     </div>
  -->
 
+<!-- 
  <div id="app">
-     
+    <h1>{{name}}</h1>
+    <button v-on:click='update'>Click me</button>
+
+    <div class="box" v-on:mousemove='getCoord'>
+        hover me
+    </div>
+    <p>X: <span>{{x}}</span></p>
+    <p>Y: <span>{{y}}</span></p>
+    
+ </div>
+   --> 
+<!-- 
+ <div id="app">
+    <h1>{{name}}</h1>
+   
+    <button v-on:click='update("Rainy", $event)'>Click me</button>
+    
  </div>
    
+ -->
+ <!-- 
+ <div id="app">
+    
+    <form v-on:submit.prevent="formHandle">
+        <label for="">First Name</label>
+        <input type="text" v-model="firstName">
+        <br><br>
+        <label for="">Last Name</label>
+        <input type="text" v-model="lastName" >
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+    
+ </div>
+  -->
+
+
+ <div id="app">
+    
+    <h1>Increment & Decrement </h1>
+
+    <h4>Increment: {{increase}}</h4>
+    <h4>Decrement: {{decrease}}</h4>
+
+    <button v-on:click="inc++">
+        Increment</button>
+    <button v-on:click="dec--">
+        Decrement</button>
+    
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script src="js/app.js"></script>
 </body>
 </html>

@@ -97,13 +97,124 @@ var app = new Vue({
  */
 
 
+// v-once directive
+//one time rendering
+/* 
+var app = new Vue({
+    el: '#app',
+    data: {
+        name: 'Jacky'
+    },
+    methods: {
+       update(){
+            setTimeout(()=>{
+                this.name = 'Amzad'
+            }, 2000);
+       }
+    },
+});
+
+ */
+
+//event demo ..
+/* 
+var app = new Vue({
+    el: '#app',
+    data: {
+        name: 'Jacky',
+        x: 0,
+        y: 0
+    },
+    methods: {
+       update(){
+            this.name = 'Amzad'
+       },
+       getCoord(e){
+            this.x = e.clientX;
+            this.y = e.clientY;
+       }
+    },
+});
+ */
+
+ //argument passing
+/* var app = new Vue({
+    el: '#app',
+    data: {
+        name: 'Jacky',
+    },
+    methods: {
+       update(arg, event){
+            this.name = arg;
+            console.log(event);
+       },
+    },
+});
+ */
+
+//two ay data binding
+/* 
+var app = new Vue({
+    el: '#app',
+    data: {
+        firstName:"",
+        lastName: ""
+    },
+    methods: {
+        formHandle(){
+            console.log(this.firstName);
+            console.log(this.lastName);
+       },
+    },
+});
+ */
+
+ 
+// computed property
 
 var app = new Vue({
     el: '#app',
     data: {
+        inc: 0,
+        dec: 0,
+        fixed: 10
+    },
 
+    computed: {
+        increase(){
+            console.log("A");
+            return this.inc + this.fixed
+        },
+        decrease(){
+            console.log("B");
+            return this.dec + this.fixed
+        }
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
