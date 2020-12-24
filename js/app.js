@@ -172,7 +172,7 @@ var app = new Vue({
  
 // computed property
 
-var app = new Vue({
+/* var app = new Vue({
     el: '#app',
     data: {
         inc: 0,
@@ -191,10 +191,41 @@ var app = new Vue({
         }
     }
 });
+ */
+
+//use build in mount method
+//for dynamically use
+/* const temp = `<p>My name is {{name}}</p>`;
+ var app1 = new Vue({
+
+     data: {
+         name: 'Jacky'
+     },
+     template: temp
+ });
+
+ setTimeout(() => {
+    app1.$mount('#app');
+ }, 2000);
+ */
 
 
+ //vue component
 
+ Vue.component('tab', {
 
+    data(){
+
+        return {
+            name: 'Jacky'
+        }
+    },
+    template: `<p>My name is: {{name}}</p>`
+ })
+
+ var app = new Vue({
+    el: '#app'
+ })
 
 
 
